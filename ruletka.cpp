@@ -1,5 +1,6 @@
 //TODO:
 //w konkretnym polu sprawdzenie czy podajesz pole (0,36)
+//dodac nowa funkcje find
 #include <iostream>
 #include "ruletka.h"
 #include <stdlib.h>
