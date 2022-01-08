@@ -1,0 +1,6 @@
+# ninja log v5
+1	503	6633417524718468	CMakeFiles/Casino2_0.dir/main.cpp.obj	8e71451e799b314
+15	570	6633417525386692	CMakeFiles/Casino2_0.dir/ruletka.cpp.obj	43fc1c3940e48267
+570	703	6633417526683220	Casino2_0.exe	49a6bbe9ab8f1f33
+3	546	6633418525276596	CMakeFiles/Casino2_0.dir/ruletka.cpp.obj	43fc1c3940e48267
+546	662	6633418526393605	Casino2_0.exe	49a6bbe9ab8f1f33
