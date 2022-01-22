@@ -61,6 +61,12 @@ build CMakeFiles/Casino2_0.dir/ruletka.cpp.obj: CXX_COMPILER__Casino2_0_Debug C$
   OBJECT_DIR = CMakeFiles\Casino2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\Casino2_0.dir
 
+build CMakeFiles/Casino2_0.dir/sloty.cpp.obj: CXX_COMPILER__Casino2_0_Debug C$:/Users/rainb/Desktop/Casino2.0/sloty.cpp || cmake_object_order_depends_target_Casino2_0
+  DEP_FILE = CMakeFiles\Casino2_0.dir\sloty.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Casino2_0.dir
+  OBJECT_FILE_DIR = CMakeFiles\Casino2_0.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Casino2_0
@@ -69,7 +75,7 @@ build CMakeFiles/Casino2_0.dir/ruletka.cpp.obj: CXX_COMPILER__Casino2_0_Debug C$
 #############################################
 # Link the executable Casino2_0.exe
 
-build Casino2_0.exe: CXX_EXECUTABLE_LINKER__Casino2_0_Debug CMakeFiles/Casino2_0.dir/main.cpp.obj CMakeFiles/Casino2_0.dir/ruletka.cpp.obj
+build Casino2_0.exe: CXX_EXECUTABLE_LINKER__Casino2_0_Debug CMakeFiles/Casino2_0.dir/main.cpp.obj CMakeFiles/Casino2_0.dir/ruletka.cpp.obj CMakeFiles/Casino2_0.dir/sloty.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Casino2_0.dir
