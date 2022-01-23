@@ -371,3 +371,4 @@ auto RULETKAMAIN() -> int{
 /*auto main() -> int{
     RULETKAMAIN();
 } */
+//
