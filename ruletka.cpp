@@ -88,7 +88,7 @@ auto ruletka_main() ->int{
     std::cout << "\n0. wyjscie.\n";
     std::cout<<"podaj numer zakladu: ";
     std::cin >> wybor;
-    while (wybor<1 || wybor>11){
+    while (wybor<0 || wybor>11){
         std::cout << "nie ma takiego zakladu, podaj poprawny numer: ";
         std::cin >> wybor;
     }

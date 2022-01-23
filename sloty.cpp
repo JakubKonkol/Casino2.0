@@ -9,7 +9,7 @@ bool S_CanPlay = true;
 bool S_PlayAgain = true;
 int S_PLAYER_MONEY = 1000;
 int S_zaklad;
-std::string S_jeszczeraz;
+int S_jeszczeraz;
 auto S_BetSetup() -> void{
     std::cout <<"Masz: "<< S_PLAYER_MONEY <<"PLN\n";
     std::cout <<"Ile chcesz postawic?(min 10, max 100pln)\n";
@@ -49,26 +49,21 @@ auto S_win(int beciak, int S_mnoznik) -> void{
 }
 auto S_lose() -> void{
     std::cout <<"niestety nie udalo sie! \n";
-    std::cout <<"chcesz zagrac jeszcze raz? (tak/nie/zmienzaklad)";
+    std::cout <<"chcesz zagrac jeszcze raz? 1.tak 2.nie 3.zmien zaklad";
     std::cin >> S_jeszczeraz;
-    if (S_jeszczeraz=="tak"){
-        S_PlayAgain = true;
-        gra();
-    }
-    if (S_jeszczeraz=="nie"){
-        S_PlayAgain = false;
-        SLOTY_MAIN();
-
-    }
-    if (S_jeszczeraz =="zmienzaklad"){
-        //zmiana ustawienia zakladu i rozpoczyna gre
-        S_BetSetup();
-        gra();
-
-    }
-    if (S_jeszczeraz !="tak"&&S_jeszczeraz!="nie"&& S_jeszczeraz!="zmienzaklad"){
-        std::cout << "nie ma takiej opcji! program zakonczy sie!";
-        S_PlayAgain = false;
+    switch (S_jeszczeraz){
+        case 1:
+            S_PlayAgain = true;
+            gra();
+            break;
+        case 2:
+            S_PlayAgain = false;
+            SLOTY_MAIN();
+            break;
+        case 3:
+            S_BetSetup();
+            gra();
+            break;
     }
     return;
 }
@@ -84,13 +79,13 @@ auto gra() -> void{
         std::cout << "\n---------------------------------------\n";
         if(ws1 != 7 && ws2 != 7 && ws3 != 7){
             if(ws1 == ws2 && ws2 == ws3){
-                S_win(S_zaklad, 2);
+                S_win(S_zaklad, 50);
             }
             else{
                 S_lose();
             }
         }if(ws1==7 && ws2==7 && ws3==7){
-            S_win(S_zaklad, 100);
+            S_win(S_zaklad, 500);
         }
         else{
             S_lose();
@@ -109,6 +104,9 @@ auto SLOTY_MAIN()-> int{
             gra();
         }
 
+    }
+    if(S_PlayAgain==false){
+        std::cout << "gra zakonczy sie\n";
     }
     return 0;
 }
