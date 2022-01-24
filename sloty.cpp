@@ -68,9 +68,8 @@ auto S_lose() -> void{
     return;
 }
 auto gra() -> void{
-    //S_BetSetup();
     if(S_CanPlay){
-        //TU POBRAC KASE !!!
+        S_PLAYER_MONEY = S_PLAYER_MONEY-S_zaklad;
         std::cout << "\n---------------------------------------\n";
         S_losuj();
         std::cout << "WYLOSOWANE LICZBY TO...: \n";
